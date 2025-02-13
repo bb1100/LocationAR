@@ -13,7 +13,7 @@ window.onload = () => {
             alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
 
 
-            const entity = document.createElement("a-asset-item");
+            const entity = document.createElement("a-box");
             entity.setAttribute("scale", {
                 x: 20, 
                 y: 20,
