@@ -32,7 +32,7 @@ window.onload = () => {
 */
 
         const entity = document.createElement("a-entity");
-            entity.setAttribute("scale", {x: 190, y: 190, z: 190});
+            entity.setAttribute("scale", {x: 150, y: 150, z: 150});
             entity.setAttribute("gltf-model", "3D/rubber_duck.glb");
             entity.setAttribute('gps-new-entity-place', {
                 latitude: mapLatitude + latOffset,
