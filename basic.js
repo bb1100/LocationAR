@@ -12,7 +12,7 @@ window.onload = () => {
         if(!testEntityAdded) {
             alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
 
-
+/*
             const entity = document.createElement("a-box");
             entity.setAttribute("scale", {
                 x: 20, 
@@ -27,7 +27,18 @@ window.onload = () => {
             document.querySelector("a-scene").appendChild(entity);
         }
         testEntityAdded = true;
+*/
 
+        const entity = document.createElement("a-entity");
+            entity.setAttribute("scale", {x: 20, y: 20, z: 20});
+            entity.setAttribute("gltf-model", "3D/rubber_duck.glb");
+            entity.setAttribute('gps-new-entity-place', {
+                latitude: e.detail.position.latitude + latOffset,
+                longitude: e.detail.position.longitude
+            });
+            document.querySelector("a-scene").appendChild(entity);
+        }
+        testEntityAdded = true;
 
         function floatAnimation() {
             t += 0.01;
