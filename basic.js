@@ -1,7 +1,7 @@
 window.onload = () => {
     let testEntityAdded = false;
-    const mapLatitude = 51.40784492061785;
-    const mapLongitude = 0.4290944001394129;
+    const mapLatitude = 51.40799491618464;
+    const mapLongitude = 0.4288036046040057;
     let latOffset = 0;//0.001;
 
     const el = document.querySelector("[gps-new-camera]");
@@ -42,11 +42,11 @@ window.onload = () => {
         }
         testEntityAdded = true;
 
-        function floatAnimation() {
-            t += 0.01;
-            requestAnimationFrame(floatAnimation);
-            entity.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
-          }
+        // function floatAnimation() {
+        //     t += 0.01;
+        //     requestAnimationFrame(floatAnimation);
+        //     entity.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
+        //   }
         // floatAnimation();
     });
 };
