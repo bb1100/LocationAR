@@ -12,13 +12,15 @@
         <a-scene vr-mode-ui='enabled: false' 
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' 
         renderer='antialias: true; alpha: true'>
+
             <a-camera gps-new-camera='gpsMinDistance: 5'>
             </a-camera>
-            <a-cylinder color="red" 
-            gps-new-entity-place="latitude: 51.40782902952333; longitude: 0.42919402335368967;" 
-            height="20" 
-            radius="0.5">
-            </a-cylinder>
+
+            <a-assets>
+                <a-asset-item id="duck" src="3D/rubber_duck.glb"></a-asset-item>
+              </a-assets>
+            
+              <a-entity gltf-model="#tree"></a-entity>
         </a-scene>
     </body>
 </html>
