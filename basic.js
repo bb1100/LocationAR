@@ -45,6 +45,6 @@ window.onload = () => {
             requestAnimationFrame(floatAnimation);
             entity.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
           }
-        floatAnimation();
+        // floatAnimation();
     });
 };
