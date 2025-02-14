@@ -62,7 +62,7 @@ window.onload = () => {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
             });
-            entity.setAttribute("position", "0 100 0");
+            
 
             // const position = entity.getAttribute(position);
             // entity.setAttribute("float-animation", {
@@ -75,7 +75,7 @@ window.onload = () => {
             // });
 
             // With three.js
-            // entity.object3D.position.set(1, 2, 3);
+            entity.object3D.position.set(0, 100, 0);
 
             document.querySelector("a-scene").appendChild(entity);
             testEntityAdded = true;
