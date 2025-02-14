@@ -40,15 +40,17 @@ window.onload = () => {
             });
             // let position = entity.getAttribute('position');
             entity.setAttribute("position", {x: 0, y: 0, z: 0});
-            entity.setAttribute('float-animation', '');
-            // entity.setAttribute("animation", {
-            //     property: 'position.y', 
-            //     from: 0, 
-            //     to: 30, 
-            //     dur: 2000, 
-            //     easing: 'easeOutCubic', 
-            //     loop: true
-            // });
+            // entity.setAttribute('float-animation', '');
+            setTimeout(() => {
+                entity.setAttribute("animation", {
+                    property: 'position.y', 
+                    from: 0, 
+                    to: 30, 
+                    dur: 2000, 
+                    easing: 'easeOutCubic', 
+                    loop: true
+                });
+        }   , 0);
             document.querySelector("a-scene").appendChild(entity);
         }
         testEntityAdded = true;
