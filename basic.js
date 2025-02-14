@@ -45,13 +45,13 @@ window.onload = () => {
             //    entity.setAttribute("animation", {property: position.y, dir: alternate, dur: 1000,
             //                    easing: easeInSine, loop: true, to: 30});
 
-            function floatAnimation() {
-                t += 0.01;
-                requestAnimationFrame(floatAnimation);
-                entity.setAttribute("position", 0 + (Math.sin(t * 2) + 30) + 0);
-            }
-            floatAnimation();
-            
+            // function floatAnimation() {
+            //     t += 0.01;
+            //     requestAnimationFrame(floatAnimation);
+            //     entity.setAttribute("position", 0 + (Math.sin(t * 2) + 30) + 0);
+            // }
+            // floatAnimation();
+
             document.querySelector("a-scene").appendChild(entity);
         }
         testEntityAdded = true;
