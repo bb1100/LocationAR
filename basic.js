@@ -34,16 +34,16 @@ window.onload = () => {
         testEntityAdded = true;
 */          
             
-            // const entity = document.createElement("a-entity");
-            // entity.setAttribute("scale", {x: 1, y: 1, z: 1});
-            // entity.setAttribute("gltf-model", "3D/rubber_duck.glb");
-            // entity.setAttribute('gps-new-entity-place', {
-            //     latitude: mapLatitude + latOffset,
-            //     longitude: mapLongitude
-            // });
+            const entity = document.createElement("a-entity");
+            entity.setAttribute("scale", {x: 1, y: 1, z: 1});
+            entity.setAttribute("gltf-model", "3D/rubber_duck.glb");
+            entity.setAttribute('gps-new-entity-place', {
+                latitude: mapLatitude + latOffset,
+                longitude: mapLongitude
+            });
 
-            // entity.setAttribute("animation", {property: position.y, dir: alternate, dur: 1000,
-            //   easing: easeInSine, loop: true, to: 30});
+            entity.setAttribute("animation", {property: position.y, dir: alternate, dur: 1000,
+              easing: easeInSine, loop: true, to: position.y + 1});
 
 
         }
