@@ -1,7 +1,7 @@
 window.onload = () => {
     let testEntityAdded = false;
-    const mapLatitude = 51.40778534293298;
-    const mapLongitude = 0.42927255334308073;
+    const mapLatitude = 51.4077;
+    const mapLongitude = 0.4292;
     let latOffset = 0.001;
 
     const el = document.querySelector("[gps-new-camera]");
@@ -32,7 +32,7 @@ window.onload = () => {
 */
 
         const entity = document.createElement("a-entity");
-            entity.setAttribute("scale", {x: 150, y: 150, z: 150});
+            entity.setAttribute("scale", {x: 100, y: 100, z: 100});
             entity.setAttribute("gltf-model", "3D/rubber_duck.glb");
             entity.setAttribute('gps-new-entity-place', {
                 latitude: mapLatitude + latOffset,
