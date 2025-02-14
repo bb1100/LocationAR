@@ -27,8 +27,9 @@
                 <a-asset-item id="duck" src="3D/rubber_duck.glb"></a-asset-item>
             </a-assets>
             <a-entity gltf-model="#duck"></a-entity>
-            <!-- gps-new-entity-place="latitude: 51.4086; longitude: 0.4293"
-            scale="1 1 1"></a-entity> -->
+            gps-new-entity-place="latitude: 51.4086; longitude: 0.4293" scale="1 1 1"
+            animation__yoyo="property: position; dir: alternate; dur: 1000;
+                                 easing: easeInSine; loop: true; to: 0 30 0"></a-entity>
 
             
         </a-scene>
