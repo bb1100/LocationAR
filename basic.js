@@ -75,6 +75,7 @@ window.onload = () => {
             // });
 
             // With three.js
+            const time = new Date();
             entity.object3D.position.set(0, 100, 0);
 
             document.querySelector("a-scene").appendChild(entity);
