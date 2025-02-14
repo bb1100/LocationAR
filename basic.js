@@ -12,7 +12,7 @@ window.onload = () => {
 
     el.addEventListener("gps-camera-update-position", e => {
         if(!testEntityAdded) {
-            alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
+            // alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
 
 /*
             const entity = document.createElement("a-box");
@@ -40,9 +40,9 @@ window.onload = () => {
             });
             // entity.setAttribute("position", {x: 0, y: 30, z: 0});
             entity.setAttribute("animation", {
-                property: 'position', 
-                from: 0 0 0, 
-                to: 0 30 0, 
+                property: 'position.y', 
+                from: 0, 
+                to: 0, 
                 dur: 2000, 
                 easing: easeOutCubic, 
                 loop: true
