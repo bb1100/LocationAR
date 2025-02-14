@@ -38,29 +38,20 @@ window.onload = () => {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
             });
-            // let position = entity.getAttribute('position');
-            entity.setAttribute("position", {x: 0, y: 0, z: 0});
-            // entity.setAttribute('float-animation', '');
-            setTimeout(() => {
-                entity.setAttribute("animation", {
-                    property: 'position.y', 
-                    from: 0, 
-                    to: 30, 
-                    dur: 2000, 
-                    easing: 'easeInOutSine',
-                    dir: 'alternate',
-                    loop: true
-                });
-        }   , 0);
+
+        //    entity.setAttribute("animation", {property: position.y, dir: alternate, dur: 1000,
+        //                    easing: easeInSine, loop: true, to: 30});
+
             document.querySelector("a-scene").appendChild(entity);
         }
         testEntityAdded = true;
 
-        // function floatAnimation() {
-        //     t += 0.01;
-        //     requestAnimationFrame(floatAnimation);
-        //     entity.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
-        //   }
-        // floatAnimation();
+        let t =0;
+        function floatAnimation() {
+            t += 0.01;
+            requestAnimationFrame(floatAnimation);
+            entity.setAttribute("position", 3 + (Math.sin(t * 2) + 1) + );
+          }
+        floatAnimation();
     });
 };
