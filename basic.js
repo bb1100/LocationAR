@@ -1,19 +1,40 @@
+AFRAME.registerComponent('float-animation', {
+    schema: {
+      from: { type: 'number', default: 1.6 }, // Start height (Y-axis)
+      to: { type: 'number', default: 8 }, // End height (Y-axis)
+      duration: { type: 'number', default: 2000 }, // Duration in ms
+      easing: { type: 'string', default: 'easeInOutSine' } // Easing function
+    },
+  
+    init: function () {
+      let position = this.el.getAttribute('position');
+      
+      this.el.setAttribute('animation', {
+        property: 'position.y',
+        from: this.data.from,
+        to: this.data.to,
+        dur: this.data.duration,
+        easing: this.data.easing,
+        loop: true
+      });
+    }
+  });
+
 window.onload = () => {
     let testEntityAdded = false;
     const mapLatitude = 51.4076;
     const mapLongitude = 0.4293;
     let latOffset = 0.001;
 
-    let t =0;
 
-    const el = document.querySelector("[gps-new-camera]");
+    const camera = document.querySelector("[gps-new-camera]");
 
     document.addEventListener('DOMContentLoaded', function(){
         alert = function(){};
     }, false);
 
 
-    el.addEventListener("gps-camera-update-position", e => {
+    camera.addEventListener("gps-camera-update-position", e => {
         if(!testEntityAdded) {
             // alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
 
@@ -35,21 +56,24 @@ window.onload = () => {
 */          
             
             const entity = document.createElement("a-entity");
-            entity.setAttribute("scale", {x: 1, y: 1, z: 1});
+            entity.setAttribute("scale", "1 1 1");
             entity.setAttribute("gltf-model", "3D/rubber_duck.glb");
             entity.setAttribute('gps-new-entity-place', {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
             });
 
-            const position = entity.getAttribute(position);
-            entity.setAttribute("animation", {property: position.y, dir: alternate, dur: 1000,
-              easing: easeInSine, loop: true, to: position.y + 1});
-
-
+            // const position = entity.getAttribute(position);
+            entity.setAttribute("animation", {
+                property: "position.y",
+                dir: "alternate",
+                dur: 1000,
+                easing: "easeInSine",
+                loop: true,
+                to: "2"
+            });
+            document.querySelector("a-scene").appendChild(entity);
+            testEntityAdded = true;
         }
-        testEntityAdded = true;
-
-        
     });
 };
