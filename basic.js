@@ -62,7 +62,7 @@ window.onload = () => {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
             });
-            entity.setAttribute("position", "0 30 0");
+            entity.setAttribute("position", "0 100 0");
 
             // const position = entity.getAttribute(position);
             // entity.setAttribute("float-animation", {
