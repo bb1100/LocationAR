@@ -38,7 +38,9 @@ window.onload = () => {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
             });
-            entity.setAttribute("animation", {property: object3D.position.y, from: 0, to: 3, dur: 2000, easing: easeOutCubic, loop: true});
+            entity.setAttribute("animation", {
+                property: entity.position.y, from: 0, to: 0.5, 
+                dur: 2000, easing: easeOutCubic, loop: true});
             document.querySelector("a-scene").appendChild(entity);
         }
         testEntityAdded = true;
