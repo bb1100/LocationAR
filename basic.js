@@ -47,7 +47,8 @@ window.onload = () => {
                     from: 0, 
                     to: 30, 
                     dur: 2000, 
-                    easing: 'easeOutCubic', 
+                    easing: 'easeInOutSine',
+                    dir: 'alternate',
                     loop: true
                 });
         }   , 0);
