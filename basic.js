@@ -38,11 +38,13 @@ window.onload = () => {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
             });
-            // entity.setAttribute("position", {x: 0, y: 30, z: 0});
+            // let position = entity.getAttribute('position');
+            entity.setAttribute("position", {x: 0, y: 0, z: 0});
+            entity.setAttribute('float-animation', '');
             entity.setAttribute("animation", {
                 property: 'position.y', 
                 from: 0, 
-                to: 0, 
+                to: 30, 
                 dur: 2000, 
                 easing: 'easeOutCubic', 
                 loop: true
