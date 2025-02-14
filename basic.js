@@ -1,7 +1,7 @@
 window.onload = () => {
     let testEntityAdded = false;
-    const mapLatitude = 51.4077;
-    const mapLongitude = 0.4292;
+    const mapLatitude = 51.4076;
+    const mapLongitude = 0.4293;
     let latOffset = 0.001;
 
     const el = document.querySelector("[gps-new-camera]");
