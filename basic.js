@@ -45,14 +45,7 @@ window.onload = () => {
             //    entity.setAttribute("animation", {property: position.y, dir: alternate, dur: 1000,
             //                    easing: easeInSine, loop: true, to: 30});
 
-            document.querySelector("a-scene").appendChild(entity);
 
-            function floatAnimation() {
-                t += 0.01;
-                requestAnimationFrame(floatAnimation);
-                entity.setAttribute("position", 0 + (Math.sin(t * 2) + 30) + 0);
-            }
-            floatAnimation();
         }
         testEntityAdded = true;
 
