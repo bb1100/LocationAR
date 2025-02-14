@@ -38,10 +38,10 @@ window.onload = () => {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
             });
-            entity.setAttribute("position", {x: 0, y: 30, z: 0});
-            // entity.setAttribute("animation", {
-            //     property: entity.object3D.position.y, from: 0, to: 0.5, 
-            //     dur: 2000, easing: easeOutCubic, loop: true});
+            // entity.setAttribute("position", {x: 0, y: 30, z: 0});
+            entity.setAttribute("animation", {
+                property: position.y, from: 0, to: 30, 
+                dur: 2000, easing: easeOutCubic, loop: true});
             document.querySelector("a-scene").appendChild(entity);
         }
         testEntityAdded = true;
