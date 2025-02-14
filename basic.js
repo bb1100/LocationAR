@@ -14,6 +14,14 @@ window.onload = () => {
 
 
     el.addEventListener("gps-camera-update-position", e => {
+        const entity = document.querySelector("#duck");
+
+        entity.setAttribute("scale", {x: 1, y: 1, z: 1});
+        entity.setAttribute('gps-new-entity-place', {
+            latitude: mapLatitude + latOffset,
+            longitude: mapLongitude
+        });
+
         if(!testEntityAdded) {
             // alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
 
@@ -33,14 +41,14 @@ window.onload = () => {
         }
         testEntityAdded = true;
 */          
-            const entity = document.querySelector("#duck");
+            
             // const entity = document.createElement("a-entity");
-            entity.setAttribute("scale", {x: 1, y: 1, z: 1});
+            // entity.setAttribute("scale", {x: 1, y: 1, z: 1});
             // entity.setAttribute("gltf-model", "3D/rubber_duck.glb");
-            entity.setAttribute('gps-new-entity-place', {
-                latitude: mapLatitude + latOffset,
-                longitude: mapLongitude
-            });
+            // entity.setAttribute('gps-new-entity-place', {
+            //     latitude: mapLatitude + latOffset,
+            //     longitude: mapLongitude
+            // });
 
             // entity.setAttribute("animation", {property: position.y, dir: alternate, dur: 1000,
             //   easing: easeInSine, loop: true, to: 30});
