@@ -44,7 +44,7 @@ window.onload = () => {
                 from: 0, 
                 to: 0, 
                 dur: 2000, 
-                easing: easeOutCubic, 
+                easing: 'easeOutCubic', 
                 loop: true
             });
             document.querySelector("a-scene").appendChild(entity);
