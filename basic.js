@@ -47,11 +47,11 @@ window.onload = () => {
         testEntityAdded = true;
 
         let t =0;
-        function floatAnimation() {
+        function floatAnimation(entity) {
             t += 0.01;
             requestAnimationFrame(floatAnimation);
             entity.setAttribute("position", 3 + (Math.sin(t * 2) + 1) + 0);
           }
-        floatAnimation();
+        floatAnimation(entity);
     });
 };
