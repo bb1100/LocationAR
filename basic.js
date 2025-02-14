@@ -73,6 +73,14 @@ window.onload = () => {
             //     loop: true,
             //     to: "0 2 0"
             // });
+
+            entity.setAttribute('float-animation', {
+                from: 0, // Start height (Y-axis)
+                to: 3,     // End height (Y-axis)
+                duration: 2000, // Duration of animation
+                easing: 'easeInOutSine' // Easing function
+              });
+
             document.querySelector("a-scene").appendChild(entity);
             testEntityAdded = true;
         }
