@@ -64,14 +64,14 @@ window.onload = () => {
             });
 
             // const position = entity.getAttribute(position);
-            entity.setAttribute("animation", {
-                property: "position.y",
-                dir: "alternate",
-                dur: 1000,
-                easing: "easeInSine",
-                loop: true,
-                to: "2"
-            });
+            // entity.setAttribute("float-animation", {
+            //     property: "position.y",
+            //     dir: "alternate",
+            //     dur: 1000,
+            //     easing: "easeInSine",
+            //     loop: true,
+            //     to: "0 2 0"
+            // });
             document.querySelector("a-scene").appendChild(entity);
             testEntityAdded = true;
         }
