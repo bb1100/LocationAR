@@ -1,17 +1,17 @@
 AFRAME.registerComponent('float-animation', {
     schema: {
-      from: { type: 'number', default: 1.6 }, // Start height (Y-axis)
-      to: { type: 'number', default: 8 }, // End height (Y-axis)
+      to: { type: 'number', default: 10 }, // End height (Y-axis)
       duration: { type: 'number', default: 2000 }, // Duration in ms
       easing: { type: 'string', default: 'easeInOutSine' } // Easing function
     },
   
     init: function () {
-      let position = this.el.getAttribute('position');
+    let data = this.data;
+    let el = this.el;
+    let position = this.el.getAttribute('position');
       
       this.el.setAttribute('animation', {
         property: 'position.y',
-        from: this.data.from,
         to: this.data.to,
         dur: this.data.duration,
         easing: this.data.easing,
@@ -19,6 +19,8 @@ AFRAME.registerComponent('float-animation', {
       });
     }
   });
+
+
 
 window.onload = () => {
     let testEntityAdded = false;
@@ -76,14 +78,15 @@ window.onload = () => {
 
             // With three.js
             const time = new Date();
-            entity.setAttribute("animation", {
-                property: object3D.position.y, 
-                to: 10, 
-                dir: alternate, 
-                dur: 2000, 
-                loop: true
-            });
-            entity.object3D.position.set(0, 100, 0);
+            // entity.setAttribute("animation", {
+            //     property: object3D.position.y, 
+            //     to: 10, 
+            //     dir: alternate, 
+            //     dur: 2000, 
+            //     loop: true
+            // });
+            // entity.object3D.position.set(0, 100, 0);
+            entity.setAttribute("float-animation", '');
 
             // document.querySelector("a-scene").appendChild(entity);
             testEntityAdded = true;
