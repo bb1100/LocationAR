@@ -19,7 +19,7 @@
       });
     }
   });
-
+*/
 
 
 window.onload = () => {
@@ -31,9 +31,9 @@ window.onload = () => {
 
     const camera = document.querySelector("[gps-new-camera]");
 
-    document.addEventListener('DOMContentLoaded', function(){
-        alert = function(){};
-    }, false);
+    // document.addEventListener('DOMContentLoaded', function(){
+    //     alert = function(){};
+    // }, false);
 
 
     camera.addEventListener("gps-camera-update-position", e => {
@@ -57,7 +57,7 @@ window.onload = () => {
         testEntityAdded = true;
 */          
             
-/*            const entity = document.createElement("a-entity");
+           const entity = document.createElement("a-entity");
             entity.setAttribute("scale", "1 1 1");
             entity.setAttribute("gltf-model", "3D/rubber_duck.glb");
             entity.setAttribute('gps-new-entity-place', {
@@ -66,31 +66,17 @@ window.onload = () => {
             });
             
 
-            // const position = entity.getAttribute(position);
-            // entity.setAttribute("float-animation", {
-            //     property: "position.y",
-            //     dir: "alternate",
-            //     dur: 1000,
-            //     easing: "easeInSine",
-            //     loop: true,
-            //     to: "0 2 0"
-            // });
 
-            // With three.js
-            const time = new Date();
+            // const time = new Date();
             entity.setAttribute("animation", {
-                property: object3D.position.y, 
+                property: 'object3D.position.y', // Fixed: use string
                 to: 10, 
-                dir: alternate, 
+                dir: 'alternate', // Fixed: use string
                 dur: 2000, 
                 loop: true
             });
-            // entity.object3D.position.set(0, 100, 0);
-
-
             document.querySelector("a-scene").appendChild(entity);
             testEntityAdded = true;
         }
     });
 };
-*/
