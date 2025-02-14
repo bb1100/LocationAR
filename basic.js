@@ -38,15 +38,16 @@ window.onload = () => {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
             });
+            entity.setAttribute("animation", {property: object3D.position.y, to: object3D.position.y + 5, dur: 800, easing: easeOutCubic});
             document.querySelector("a-scene").appendChild(entity);
         }
         testEntityAdded = true;
 
-        // function floatAnimation() {
-        //     t += 0.01;
-        //     requestAnimationFrame(floatAnimation);
-        //     entity.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
-        //   }
-        // floatAnimation();
+        function floatAnimation() {
+            t += 0.01;
+            requestAnimationFrame(floatAnimation);
+            entity.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
+          }
+        floatAnimation();
     });
 };
