@@ -78,15 +78,15 @@ window.onload = () => {
 
             // With three.js
             const time = new Date();
-            // entity.setAttribute("animation", {
-            //     property: object3D.position.y, 
-            //     to: 10, 
-            //     dir: alternate, 
-            //     dur: 2000, 
-            //     loop: true
-            // });
+            entity.setAttribute("animation", {
+                property: object3D.position.y, 
+                to: 10, 
+                dir: alternate, 
+                dur: 2000, 
+                loop: true
+            });
             // entity.object3D.position.set(0, 100, 0);
-            // entity.setAttribute("float-animation", '');
+
 
             document.querySelector("a-scene").appendChild(entity);
             testEntityAdded = true;
