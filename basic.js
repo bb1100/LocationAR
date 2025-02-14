@@ -1,4 +1,4 @@
-AFRAME.registerComponent('float-animation', {
+/*AFRAME.registerComponent('float-animation', {
     schema: {
       to: { type: 'number', default: 10 }, // End height (Y-axis)
       duration: { type: 'number', default: 2000 }, // Duration in ms
@@ -57,7 +57,7 @@ window.onload = () => {
         testEntityAdded = true;
 */          
             
-            const entity = document.createElement("a-entity");
+/*            const entity = document.createElement("a-entity");
             entity.setAttribute("scale", "1 1 1");
             entity.setAttribute("gltf-model", "3D/rubber_duck.glb");
             entity.setAttribute('gps-new-entity-place', {
@@ -93,3 +93,4 @@ window.onload = () => {
         }
     });
 };
+*/
