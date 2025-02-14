@@ -19,14 +19,16 @@
 
             <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
 
-            <a-box color="red" gps-new-entity-place="latitude: 51.407765929020044; longitude: 0.42928049758817066"
+            <!-- <a-box color="red" gps-new-entity-place="latitude: 51.407765929020044; longitude: 0.42928049758817066"
             depth="10" height="10" width="10"
             animation__yoyo="property: position; dir: alternate; dur: 1000;
-                                 easing: easeInSine; loop: true; to: 0 2 0"></a-box>
-            <!-- <a-assets>
-                <a-asset-item id="duck" src="3D/rubber_duck.glb"></a-asset-item>
+                                 easing: easeInSine; loop: true; to: 0 2 0"></a-box> -->
+            <a-assets>
+                <a-asset-item id="duck" src="3D/rubber_duck.glb" 
+                gps-new-entity-place="latitude: 51.407765929020044; longitude: 0.42928049758817066"
+                scale="1 1 1 "></a-asset-item>
             </a-assets>
-            <a-entity gltf-model="#duck"></a-entity> -->
+            <a-entity gltf-model="#duck"></a-entity>
 
             
         </a-scene>
