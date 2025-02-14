@@ -88,7 +88,7 @@ window.onload = () => {
             // entity.object3D.position.set(0, 100, 0);
             entity.setAttribute("float-animation", '');
 
-            // document.querySelector("a-scene").appendChild(entity);
+            document.querySelector("a-scene").appendChild(entity);
             testEntityAdded = true;
         }
     });
