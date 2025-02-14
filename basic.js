@@ -42,6 +42,7 @@ window.onload = () => {
                 longitude: mapLongitude
             });
 
+            const position = entity.getAttribute(position);
             entity.setAttribute("animation", {property: position.y, dir: alternate, dur: 1000,
               easing: easeInSine, loop: true, to: position.y + 1});
 
