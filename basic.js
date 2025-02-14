@@ -4,11 +4,19 @@ window.onload = () => {
     const mapLongitude = 0.4293;
     let latOffset = 0.001;
 
+    let t =0;
+    function floatAnimation(e) {
+        t += 0.01;
+        requestAnimationFrame(floatAnimation);
+        e.setAttribute("position", 0 + (Math.sin(t * 2) + 30) + 0);
+    }
+
     const el = document.querySelector("[gps-new-camera]");
 
     document.addEventListener('DOMContentLoaded', function(){
         alert = function(){};
     }, false);
+
 
     el.addEventListener("gps-camera-update-position", e => {
         if(!testEntityAdded) {
@@ -46,13 +54,6 @@ window.onload = () => {
             document.querySelector("a-scene").appendChild(entity);
         }
         testEntityAdded = true;
-
-        let t =0;
-        function floatAnimation(e) {
-            t += 0.01;
-            requestAnimationFrame(floatAnimation);
-            e.setAttribute("position", 0 + (Math.sin(t * 2) + 30) + 0);
-        }
 
         
     });
