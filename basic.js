@@ -62,7 +62,7 @@ window.onload = () => {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
             });
-            entity.setAttribute("position", "0 0 0");
+            entity.setAttribute("position", "0 30 0");
 
             // const position = entity.getAttribute(position);
             // entity.setAttribute("float-animation", {
@@ -74,12 +74,8 @@ window.onload = () => {
             //     to: "0 2 0"
             // });
 
-            entity.setAttribute('float-animation', {
-                from: 0, // Start height (Y-axis)
-                to: 3,     // End height (Y-axis)
-                duration: 2000, // Duration of animation
-                easing: 'easeInOutSine' // Easing function
-              });
+            // With three.js
+            // entity.object3D.position.set(1, 2, 3);
 
             document.querySelector("a-scene").appendChild(entity);
             testEntityAdded = true;
