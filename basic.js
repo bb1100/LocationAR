@@ -43,11 +43,11 @@ window.onload = () => {
         }
         testEntityAdded = true;
 
-        function floatAnimation() {
-            t += 0.01;
-            requestAnimationFrame(floatAnimation);
-            entity.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
-          }
-        floatAnimation();
+        // function floatAnimation() {
+        //     t += 0.01;
+        //     requestAnimationFrame(floatAnimation);
+        //     entity.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
+        //   }
+        // floatAnimation();
     });
 };
