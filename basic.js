@@ -5,11 +5,6 @@ window.onload = () => {
     let latOffset = 0.001;
 
     let t =0;
-    function floatAnimation(e) {
-        t += 0.01;
-        requestAnimationFrame(floatAnimation);
-        e.setAttribute("position", 0 + (Math.sin(t * 2) + 30) + 0);
-    }
 
     const el = document.querySelector("[gps-new-camera]");
 
@@ -50,7 +45,13 @@ window.onload = () => {
             //    entity.setAttribute("animation", {property: position.y, dir: alternate, dur: 1000,
             //                    easing: easeInSine, loop: true, to: 30});
 
-            floatAnimation(entity);
+            function floatAnimation() {
+                t += 0.01;
+                requestAnimationFrame(floatAnimation);
+                entity.setAttribute("position", 0 + (Math.sin(t * 2) + 30) + 0);
+            }
+            floatAnimation();
+            
             document.querySelector("a-scene").appendChild(entity);
         }
         testEntityAdded = true;
