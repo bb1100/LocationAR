@@ -40,8 +40,13 @@ window.onload = () => {
             });
             // entity.setAttribute("position", {x: 0, y: 30, z: 0});
             entity.setAttribute("animation", {
-                property: entity.position.y, from: 0, to: 30, 
-                dur: 2000, easing: easeOutCubic, loop: true});
+                property: 'position', 
+                from: 0 0 0, 
+                to: 0 30 0, 
+                dur: 2000, 
+                easing: easeOutCubic, 
+                loop: true
+            });
             document.querySelector("a-scene").appendChild(entity);
         }
         testEntityAdded = true;
