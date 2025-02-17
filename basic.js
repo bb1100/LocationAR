@@ -81,12 +81,12 @@ window.onload = () => {
 
             const entity2 = document.createElement("a-entity");
             entity2.setAttribute("scale", "1 1 1");
-            entity2.setAttribute("gltf-model", "3D/crow_animated.glb");
+            entity2.setAttribute("gltf-model", "3D/rubber_duck.glb");
             entity2.setAttribute('gps-new-entity-place', {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
             });
-            // entity2.setAttribute("object3D.position","200 0 0");
+            entity2.setAttribute("position","200 0 0");
             // entity2.setAttribute("animation-mixer", {
             //     clip: "root|root|Eat.001",
             //     loop: "repeat"
