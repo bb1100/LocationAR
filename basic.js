@@ -24,8 +24,8 @@
 
 window.onload = () => {
     let testEntityAdded = false;
-    const mapLatitude = 51.4076;
-    const mapLongitude = 0.4293;
+    const mapLatitude = 51.4384;// 51.4076;
+    const mapLongitude = 0.2717; // 0.4293;
     let latOffset = 0.001;
 
 
