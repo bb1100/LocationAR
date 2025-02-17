@@ -87,9 +87,10 @@ window.onload = () => {
                 longitude: mapLongitude
             });
             entity2.setAttribute("animation", {
-                property: 'object3D.position.y',
+                property: 'object3D.position.x',
                 to: 50,
-                dur: 1000
+                dur: 1000,
+                loop: true
             });
             // entity2.setAttribute("animation-mixer", {
             //     clip: "root|root|Eat.001",
