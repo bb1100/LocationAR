@@ -86,10 +86,7 @@ window.onload = () => {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude + 0.001
             });
-            entity2.setAttribute("animation-mixer", {
-                clip: "AnimationA",
-                duration: 6.18,
-            });
+            entity2.setAttribute("animation-mixer", "AnimationA");
         
             document.querySelector("a-scene").appendChild(entity2);
 
