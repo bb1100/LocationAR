@@ -89,7 +89,7 @@ window.onload = () => {
             const e2position = entity2.getAttribute("position");
             entity2.setAttribute("animation", {
                 property: 'object3D.position.x',
-                to: entity2.object3D.position.x + 50,
+                to: entity2.object3D.position.x + 0.5,
                 dur: 1000,
                 loop: true
             });
