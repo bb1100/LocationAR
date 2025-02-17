@@ -76,6 +76,32 @@ window.onload = () => {
                 loop: true
             });
             document.querySelector("a-scene").appendChild(entity);
+
+
+
+            const entity2 = document.createElement("a-entity");
+            entity2.setAttribute("scale", "1 1 1");
+            entity2.setAttribute("gltf-model", "3D/crow_animated.glb");
+            entity2.setAttribute('gps-new-entity-place', {
+                latitude: mapLatitude + latOffset,
+                longitude: mapLongitude
+            });
+            entity2.setAttribute("position","20 0 0");
+            
+
+
+            // entity2.setAttribute("animation", {
+            //     property: 'object3D.position.y', // Fixed: use string
+            //     to: 10, 
+            //     dir: 'alternate', // Fixed: use string
+            //     dur: 2000, 
+            //     loop: true
+            // });
+            document.querySelector("a-scene").appendChild(entity2);
+
+
+
+
             testEntityAdded = true;
         }
     });
