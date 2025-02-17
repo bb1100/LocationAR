@@ -87,7 +87,7 @@ window.onload = () => {
                 longitude: mapLongitude + 0.001
             });
             entity2.setAttribute("animation-mixer", {
-                clip: "root1",
+                clip: "",
                 duration: 6.18,
             });
         
