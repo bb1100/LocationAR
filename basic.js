@@ -78,7 +78,7 @@ window.onload = () => {
             document.querySelector("a-scene").appendChild(entity);
 
 
-
+/*
             const entity2 = document.createElement("a-entity");
             entity2.setAttribute("scale", "1 1 1");
             entity2.setAttribute("gltf-model", "3D/crow_animated.glb");
@@ -89,7 +89,7 @@ window.onload = () => {
             entity2.setAttribute("animation-mixer", "");
         
             document.querySelector("a-scene").appendChild(entity2);
-
+*/
 
 
 
