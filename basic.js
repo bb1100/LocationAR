@@ -84,19 +84,8 @@ window.onload = () => {
             entity2.setAttribute("gltf-model", "3D/crow_animated.glb");
             entity2.setAttribute('gps-new-entity-place', {
                 latitude: mapLatitude + latOffset,
-                longitude: mapLongitude
+                longitude: mapLongitude + 0.001
             });
-            const e2position = entity2.getAttribute("position");
-            entity2.setAttribute("animation", {
-                property: 'object3D.position.x',
-                to: e2position.x,
-                dur: 1000,
-                loop: true
-            });
-            // entity2.setAttribute("animation-mixer", {
-            //     clip: "root|root|Eat.001",
-            //     loop: "repeat"
-            // });
         
             document.querySelector("a-scene").appendChild(entity2);
 
