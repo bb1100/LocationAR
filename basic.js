@@ -86,9 +86,10 @@ window.onload = () => {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
             });
+            const e2position = entity2.getAttribute("position");
             entity2.setAttribute("animation", {
                 property: 'object3D.position.x',
-                to: 50,
+                to: entity2.object3D.position.x + 50,
                 dur: 1000,
                 loop: true
             });
