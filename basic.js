@@ -86,7 +86,7 @@ window.onload = () => {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude + 0.001
             });
-            // entity2.setAttribute("animation-mixer", "");
+            entity2.setAttribute("animation-mixer", "");
         
             document.querySelector("a-scene").appendChild(entity2);
 
