@@ -59,7 +59,7 @@ window.onload = () => {
             
            const entity = document.createElement("a-entity");
             entity.setAttribute("scale", "1 1 1");
-            entity.setAttribute("gltf-model", "3D/rubber_duck.glb");
+            entity.setAttribute("gltf-model", "3D/hand_still.glb");
             entity.setAttribute('gps-new-entity-place', {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
