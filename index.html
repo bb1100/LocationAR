@@ -12,7 +12,9 @@
         <script src="basic.js"></script>
     </head>
     <body>
-        <a-scene vr-mode-ui='enabled: false' 
+        <a-scene light="defaultLightsEnabled: false" 
+        hdr-environment="url: images/royal_esplanade_1k.exr"
+        vr-mode-ui='enabled: false' 
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' 
         renderer='antialias: true; alpha: true'
         gltf-model="dracoDecoderPath: 3D/dracoDecoderPath;"
@@ -41,20 +43,6 @@
                 <a-asset-item id="crow" src="3D/crow_animated.glb"></a-asset-item>
             </a-assets> -->
 
-            <a-light color="white" position="-1 0.5 0"></a-light>
-            <a-light type="point" color="white" position="0 0 -2"></a-light>
-            <a-light type="ambient" color="#555"></a-light>
-
-            <a-assets>
-                <a-cubemap id="pisa">
-                <img src="https://threejs.org/examples/textures/cube/pisa/px.png">
-                <img src="https://threejs.org/examples/textures/cube/pisa/nx.png">
-                <img src="https://threejs.org/examples/textures/cube/pisa/py.png">
-                <img src="https://threejs.org/examples/textures/cube/pisa/ny.png">
-                <img src="https://threejs.org/examples/textures/cube/pisa/pz.png">
-                <img src="https://threejs.org/examples/textures/cube/pisa/nz.png">
-                </a-cubemap>
-            </a-assets>
             
             <a-light type="probe" envMap="#pisa"></a-light>
         </a-scene>
