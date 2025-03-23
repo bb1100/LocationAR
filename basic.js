@@ -60,6 +60,11 @@ window.onload = () => {
            const entity = document.createElement("a-entity");
             entity.setAttribute("scale", "1 1 1");
             entity.setAttribute("gltf-model", "3D/hand_still.glb");
+            entity.setAttribute("cube-env-map", {
+                path: "https://mkwy.fr/assets/cube-env/",
+                extension: jpg,
+                reflectivity: 0.9 
+            });
             entity.setAttribute('gps-new-entity-place', {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude

@@ -1,4 +1,5 @@
 <!-- latitude: 51.407765929020044; longitude:  0.42928049758817066; -->
+ <!-- https://stackoverflow.com/questions/64917091/aframe-gltf-cube-env-map -->
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -23,6 +24,8 @@
 
             <a-camera gps-new-camera='gpsMinDistance: 15'></a-camera>
             <!-- use 15km for London -->
+            <a-scene renderer="logarithmicDepthBuffer: true" embedded arjs>
+            <a-entity light="type: ambient; color: #BBB"></a-entity>
             <!-- <a-box gps-new-entity-place="latitude: 51.407765929020044; longitude: 0.42928049758817066"
             position="0 0 0" rotation="0 45 45" scale="2 2 2"
             animation="property: object3D.position.y; to: 10; dir: alternate; dur: 2000; loop: true"></a-box> -->
@@ -44,8 +47,6 @@
                 <a-asset-item id="crow" src="3D/crow_animated.glb"></a-asset-item>
             </a-assets> -->
 
-            
-            <a-light type="probe" envMap="#pisa"></a-light>
         </a-scene>
     </body>
 </html>
