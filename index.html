@@ -40,6 +40,19 @@
             <!-- <a-assets>
                 <a-asset-item id="crow" src="3D/crow_animated.glb"></a-asset-item>
             </a-assets> -->
+
+            <a-assets>
+                <a-cubemap id="pisa">
+                <img src="https://threejs.org/examples/textures/cube/pisa/px.png">
+                <img src="https://threejs.org/examples/textures/cube/pisa/nx.png">
+                <img src="https://threejs.org/examples/textures/cube/pisa/py.png">
+                <img src="https://threejs.org/examples/textures/cube/pisa/ny.png">
+                <img src="https://threejs.org/examples/textures/cube/pisa/pz.png">
+                <img src="https://threejs.org/examples/textures/cube/pisa/nz.png">
+                </a-cubemap>
+            </a-assets>
+            
+            <a-light type="probe" envMap="#pisa"></a-light>
         </a-scene>
     </body>
 </html>

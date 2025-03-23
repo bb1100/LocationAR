@@ -68,13 +68,13 @@ window.onload = () => {
 
 
             // const time = new Date();
-            // entity.setAttribute("animation", {
-            //     property: 'object3D.position.y', // Fixed: use string
-            //     to: 10, 
-            //     dir: 'alternate', // Fixed: use string
-            //     dur: 2000, 
-            //     loop: true
-            // });
+            entity.setAttribute("animation", {
+                property: 'object3D.position.y', // Fixed: use string
+                to: 10, 
+                dir: 'alternate', // Fixed: use string
+                dur: 2000, 
+                loop: true
+            });
             document.querySelector("a-scene").appendChild(entity);
 
 
