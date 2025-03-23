@@ -14,9 +14,7 @@
         <script src="basic.js"></script>
     </head>
     <body>
-        <a-scene light="defaultLightsEnabled: false" 
-        hdr-environment="url: images/royal_esplanade_1k.hdr"
-        vr-mode-ui='enabled: false' 
+        <a-scene vr-mode-ui='enabled: false' 
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' 
         renderer='antialias: true; alpha: true'
         gltf-model="dracoDecoderPath: 3D/dracoDecoderPath;"
@@ -46,7 +44,18 @@
             <!-- <a-assets>
                 <a-asset-item id="crow" src="3D/crow_animated.glb"></a-asset-item>
             </a-assets> -->
-
+            <a-assets>
+                <a-cubemap id="hdri">
+                <img src="images/hdri_cube/px.png">
+                <img src="images/hdri_cube/nx.png">
+                <img src="images/hdri_cube/py.png">
+                <img src="images/hdri_cube/ny.png">
+                <img src="images/hdri_cube/pz.png">
+                <img src="images/hdri_cube/nz.png">
+                </a-cubemap>
+              </a-assets>
+              
+              <a-light type="probe" envMap="#hdri"></a-light>
         </a-scene>
     </body>
 </html>

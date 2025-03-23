@@ -21,6 +21,20 @@
   });
 */
 
+// The reflective environment map washes out all the colors in 1.3.0
+// let reflectionMap = new THREE.TextureLoader().load("https://cdn.glitch.global/7426b469-4cb2-4027-abe8-f01d443ec980/PlaygroundEnvironmentMapDay.jpg?v=1646062739295");
+// reflectionMap.encoding = THREE.sRGBEncoding;   
+// reflectionMap.mapping = THREE.EquirectangularReflectionMapping;
+// myscene.object3D.environment = reflectionMap;
+
+// // Refraction map for the top sphere no longer works in 1.3.0
+// let refractionMap = new THREE.TextureLoader().load("https://cdn.glitch.global/7426b469-4cb2-4027-abe8-f01d443ec980/PlaygroundEnvironmentMapDay.jpg?v=1646062739295");
+// refractionMap.encoding = THREE.sRGBEncoding;   
+// refractionMap.mapping = THREE.EquirectangularRefractionMapping;
+// let sphere = document.getElementById("sphere");
+// sphere.getObject3D('mesh').material.envMap = refractionMap;
+// sphere.getObject3D('mesh').material.refractionRatio = 0.5;
+
 
 window.onload = () => {
     let testEntityAdded = false;
@@ -60,11 +74,6 @@ window.onload = () => {
            const entity = document.createElement("a-entity");
             entity.setAttribute("scale", "1 1 1");
             entity.setAttribute("gltf-model", "3D/hand_still.glb");
-            entity.setAttribute("cube-env-map", {
-                path: "https://mkwy.fr/assets/cube-env/",
-                extension: jpg,
-                reflectivity: 0.9 
-            });
             entity.setAttribute('gps-new-entity-place', {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
