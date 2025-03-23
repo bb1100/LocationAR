@@ -59,7 +59,7 @@ window.onload = () => {
             
            const entity = document.createElement("a-entity");
             entity.setAttribute("scale", "1 1 1");
-            entity.setAttribute("gltf-model", "3D/hand_still.glb");
+            entity.setAttribute("gltf-model", "3D/rubber_duck.glb");
             entity.setAttribute('gps-new-entity-place', {
                 latitude: mapLatitude + latOffset,
                 longitude: mapLongitude
@@ -68,13 +68,13 @@ window.onload = () => {
 
 
             // const time = new Date();
-            entity.setAttribute("animation", {
-                property: 'object3D.position.y', // Fixed: use string
-                to: 10, 
-                dir: 'alternate', // Fixed: use string
-                dur: 2000, 
-                loop: true
-            });
+            // entity.setAttribute("animation", {
+            //     property: 'object3D.position.y', // Fixed: use string
+            //     to: 10, 
+            //     dir: 'alternate', // Fixed: use string
+            //     dur: 2000, 
+            //     loop: true
+            // });
             document.querySelector("a-scene").appendChild(entity);
 
 
