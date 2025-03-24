@@ -49,6 +49,14 @@ window.onload = () => {
     //     alert = function(){};
     // }, false);
 
+    var sceneLightEl = document.createElement('a-entity');
+
+    sceneLightEl.setAttribute('light', {
+      type: 'hemisphere',
+      intensity: 3.14
+    });
+    sceneLightEl.setAttribute('hide-on-enter-ar', '');
+
 
     camera.addEventListener("gps-camera-update-position", e => {
         if(!testEntityAdded) {
