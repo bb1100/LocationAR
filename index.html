@@ -18,6 +18,11 @@
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' 
         renderer='antialias: true; alpha: true'
         gltf-model="dracoDecoderPath: 3D/dracoDecoderPath;"
+        reflection="directionalLight: a-light[type=directional]"
+        ar-hit-test="target: #objects;"
+        renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic"
+        shadow="type: pcfsoft"
+        xr-mode-ui="XRMode: xr"
         >
 
             <a-camera gps-new-camera='gpsMinDistance: 15'></a-camera>
