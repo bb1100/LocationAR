@@ -1,20 +1,21 @@
 <!-- latitude: 51.407765929020044; longitude:  0.42928049758817066; -->
- <!-- https://stackoverflow.com/questions/64917091/aframe-gltf-cube-env-map -->
+<!-- https://stackoverflow.com/questions/64917091/aframe-gltf-cube-env-map -->
+<!-- run with npm i -g five-server@latest && five-server --port=8000 -->
 <!DOCTYPE html>
     <html lang="en">
     <head>
-        <title>Location AR</title>
+        <title>On the DL</title>
         <meta name="author" content="Balraj Bains: hello@blraj.com">
-        <meta name="description" content="On the DL">
-        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <meta name="description" content="Curated events in London www.instagram.com/onthedl.london">
+        <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
         <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/three.js/build/ar-threex-location-only.js'></script>
         <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar.js'></script>
-        <script src='https://unpkg.com/three@0.136.0/examples/jsm/loaders/RGBELoader.js'></script>
         <script src="basic.js"></script>
     </head>
     <body>
-        <a-scene vr-mode-ui='enabled: false' 
+        
+        <!-- <a-scene vr-mode-ui='enabled: false' 
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' 
         renderer='antialias: true; alpha: true'
         gltf-model="dracoDecoderPath: 3D/dracoDecoderPath;"
@@ -23,44 +24,71 @@
         renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic"
         shadow="type: pcfsoft"
         xr-mode-ui="XRMode: xr"
+        renderer="logarithmicDepthBuffer: true" 
+        embedded
+        > -->
+        <a-scene
+        gltf-model="dracoDecoderPath: 3D/dracoDecoderPath;"
+        renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic"
+        renderer="logarithmicDepthBuffer: true" embedded arjs
         >
-
-            <a-camera gps-new-camera='gpsMinDistance: 15'></a-camera>
+            <!-- <a-camera gps-new-camera='gpsMinDistance: 15'></a-camera> -->
             <!-- use 15km for London -->
-            <a-scene renderer="logarithmicDepthBuffer: true" embedded arjs>
-            <a-entity light="type: ambient; color: #BBB"></a-entity>
+            <!-- <a-entity light="type: ambient; color: #BBB"></a-entity> -->
             <!-- <a-box gps-new-entity-place="latitude: 51.407765929020044; longitude: 0.42928049758817066"
             position="0 0 0" rotation="0 45 45" scale="2 2 2"
             animation="property: object3D.position.y; to: 10; dir: alternate; dur: 2000; loop: true"></a-box> -->
+            <!-- <a-assets>
+                <img id="envTexture" src="images/hdri_cube/royal_esplanade_1k-2.hdr">
+            </a-assets> -->
 
-            <!-- <a-box color="red" gps-new-entity-place="latitude: 51.407765929020044; longitude: 0.42928049758817066"
-            depth="10" height="10" width="10"></a-box> -->
+            <!-- <a-sky src="#hdri"></a-sky> -->
+
+            <!-- <a-box 
+            position="0 1.5 -3" 
+            width="1" height="1" depth="1"
+            material="
+                shader: standard;
+                metalness: 1;
+                roughness: 0;
+                envMap: #hdri;
+                color: #ffffff;  
+            "
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+            </a-box> -->
             <a-assets>
-                <!-- <a-asset-item id="duck" src="3D/rubber_duck.glb"></a-asset-item> -->
                 <a-asset-item id="hand" src="3D/hand_still.glb"></a-asset-item> 
             </a-assets>
-            <!-- <a-entity gltf-model="#duck"
-            gps-new-entity-place="latitude: 51.4086; longitude: 0.4293" scale="1 1 1"
-
-            animation="property: object3D.position.y; to: 10; dir: alternate; dur: 2000; loop: true"
-            ></a-entity> -->
-            <!-- animation="property: rotation; dur: 3000; easing: easeInSine; loop: true; to: 0 360 0" -->
+            <!-- gps-new-entity-place="latitude: 51.4086; longitude: 0.4293"  -->
+            <!-- animation="property: object3D.position.y; to: 0.1; dir: alternate; dur: 2000; loop: true" -->
+            <a-entity gltf-model="#hand"
+            
+            scale="0.01 0.01 0.01"
+            position="0 0 -5"
+            cube-env-map="path: images/hdri_cube/; extension: png;"
+            
+            animation="property: rotation; dur: 10000; easing: linear; loop: true; to: 0 0 0"
+            >
+            </a-entity>
+            
             
             <!-- <a-assets>
                 <a-asset-item id="crow" src="3D/crow_animated.glb"></a-asset-item>
             </a-assets> -->
             <a-assets>
                 <a-cubemap id="hdri">
-                <img src="images/hdri_cube/px.png">
-                <img src="images/hdri_cube/nx.png">
-                <img src="images/hdri_cube/py.png">
-                <img src="images/hdri_cube/ny.png">
-                <img src="images/hdri_cube/pz.png">
-                <img src="images/hdri_cube/nz.png">
+                <img src="images/hdri_cube/posx.png">
+                <img src="images/hdri_cube/negx.png">
+                <img src="images/hdri_cube/posy.png">
+                <img src="images/hdri_cube/negy.png">
+                <img src="images/hdri_cube/posz.png">
+                <img src="images/hdri_cube/negz.png">
                 </a-cubemap>
-              </a-assets>
+             </a-assets>
               
-              <a-light type="probe" envMap="#hdri"></a-light>
+            <!-- <a-entity light="type: ambient; color: #BBB"></a-entity>
+            <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>
+        -->
         </a-scene>
     </body>
 </html>

@@ -1,121 +1,121 @@
-/*AFRAME.registerComponent('float-animation', {
-    schema: {
-      to: { type: 'number', default: 10 }, // End height (Y-axis)
-      duration: { type: 'number', default: 2000 }, // Duration in ms
-      easing: { type: 'string', default: 'easeInOutSine' } // Easing function
-    },
+// /*AFRAME.registerComponent('float-animation', {
+//     schema: {
+//       to: { type: 'number', default: 10 }, // End height (Y-axis)
+//       duration: { type: 'number', default: 2000 }, // Duration in ms
+//       easing: { type: 'string', default: 'easeInOutSine' } // Easing function
+//     },
   
-    init: function () {
-    let data = this.data;
-    let el = this.el;
-    let position = this.el.getAttribute('position');
+//     init: function () {
+//     let data = this.data;
+//     let el = this.el;
+//     let position = this.el.getAttribute('position');
       
-      this.el.setAttribute('animation', {
-        property: 'position.y',
-        to: this.data.to,
-        dur: this.data.duration,
-        easing: this.data.easing,
-        loop: true
-      });
-    }
-  });
-*/
+//       this.el.setAttribute('animation', {
+//         property: 'position.y',
+//         to: this.data.to,
+//         dur: this.data.duration,
+//         easing: this.data.easing,
+//         loop: true
+//       });
+//     }
+//   });
+// */
 
-// The reflective environment map washes out all the colors in 1.3.0
-// let reflectionMap = new THREE.TextureLoader().load("https://cdn.glitch.global/7426b469-4cb2-4027-abe8-f01d443ec980/PlaygroundEnvironmentMapDay.jpg?v=1646062739295");
-// reflectionMap.encoding = THREE.sRGBEncoding;   
-// reflectionMap.mapping = THREE.EquirectangularReflectionMapping;
-// myscene.object3D.environment = reflectionMap;
+// // The reflective environment map washes out all the colors in 1.3.0
+// // let reflectionMap = new THREE.TextureLoader().load("https://cdn.glitch.global/7426b469-4cb2-4027-abe8-f01d443ec980/PlaygroundEnvironmentMapDay.jpg?v=1646062739295");
+// // reflectionMap.encoding = THREE.sRGBEncoding;   
+// // reflectionMap.mapping = THREE.EquirectangularReflectionMapping;
+// // myscene.object3D.environment = reflectionMap;
 
-// // Refraction map for the top sphere no longer works in 1.3.0
-// let refractionMap = new THREE.TextureLoader().load("https://cdn.glitch.global/7426b469-4cb2-4027-abe8-f01d443ec980/PlaygroundEnvironmentMapDay.jpg?v=1646062739295");
-// refractionMap.encoding = THREE.sRGBEncoding;   
-// refractionMap.mapping = THREE.EquirectangularRefractionMapping;
-// let sphere = document.getElementById("sphere");
-// sphere.getObject3D('mesh').material.envMap = refractionMap;
-// sphere.getObject3D('mesh').material.refractionRatio = 0.5;
-
-
-window.onload = () => {
-    let testEntityAdded = false;
-    const mapLatitude = 51.4076;
-    const mapLongitude = 0.4293;
-    let latOffset = 0.002;
+// // // Refraction map for the top sphere no longer works in 1.3.0
+// // let refractionMap = new THREE.TextureLoader().load("https://cdn.glitch.global/7426b469-4cb2-4027-abe8-f01d443ec980/PlaygroundEnvironmentMapDay.jpg?v=1646062739295");
+// // refractionMap.encoding = THREE.sRGBEncoding;   
+// // refractionMap.mapping = THREE.EquirectangularRefractionMapping;
+// // let sphere = document.getElementById("sphere");
+// // sphere.getObject3D('mesh').material.envMap = refractionMap;
+// // sphere.getObject3D('mesh').material.refractionRatio = 0.5;
 
 
-    const camera = document.querySelector("[gps-new-camera]");
-
-    // document.addEventListener('DOMContentLoaded', function(){
-    //     alert = function(){};
-    // }, false);
-
-    var sceneLightEl = document.createElement('a-entity');
-
-    sceneLightEl.setAttribute('light', {
-      type: 'hemisphere',
-      intensity: 3.14
-    });
-    sceneLightEl.setAttribute('hide-on-enter-ar', '');
+// window.onload = () => {
+//     let testEntityAdded = false;
+//     const mapLatitude = 51.4076;
+//     const mapLongitude = 0.4293;
+//     let latOffset = 0.002;
 
 
-    camera.addEventListener("gps-camera-update-position", e => {
-        if(!testEntityAdded) {
-            // alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
+//     // const camera = document.querySelector("[gps-new-camera]");
 
-/*
-            const entity = document.createElement("a-box");
-            entity.setAttribute("scale", {
-                x: 20, 
-                y: 20,
-                z: 20
-            });
-            // entity.setAttribute('material', { color: 'red' } );
-            entity.setAttribute('gps-new-entity-place', {
-                latitude: e.detail.position.latitude + latOffset,
-                longitude: e.detail.position.longitude
-            });
-            document.querySelector("a-scene").appendChild(entity);
-        }
-        testEntityAdded = true;
-*/          
+//     // document.addEventListener('DOMContentLoaded', function(){
+//     //     alert = function(){};
+//     // }, false);
+
+//     var sceneLightEl = document.createElement('a-entity');
+
+//     sceneLightEl.setAttribute('light', {
+//       type: 'hemisphere',
+//       intensity: 3.14
+//     });
+//     // sceneLightEl.setAttribute('hide-on-enter-ar', '');
+
+
+//     // camera.addEventListener("gps-camera-update-position", e => {
+//         if(!testEntityAdded) {
+//             // alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
+
+// /*
+//             const entity = document.createElement("a-box");
+//             entity.setAttribute("scale", {
+//                 x: 20, 
+//                 y: 20,
+//                 z: 20
+//             });
+//             // entity.setAttribute('material', { color: 'red' } );
+//             entity.setAttribute('gps-new-entity-place', {
+//                 latitude: e.detail.position.latitude + latOffset,
+//                 longitude: e.detail.position.longitude
+//             });
+//             document.querySelector("a-scene").appendChild(entity);
+//         }
+//         testEntityAdded = true;
+// */          
             
-           const entity = document.createElement("a-entity");
-            entity.setAttribute("scale", "1 1 1");
-            entity.setAttribute("gltf-model", "3D/hand_still.glb");
-            entity.setAttribute('gps-new-entity-place', {
-                latitude: mapLatitude + latOffset,
-                longitude: mapLongitude
-            });
+//            const entity = document.createElement("a-entity");
+//             entity.setAttribute("scale", "0.1 0.1 0.1");
+//             entity.setAttribute("gltf-model", "3D/hand_still.glb");
+//             // entity.setAttribute('gps-new-entity-place', {
+//             //     latitude: mapLatitude + latOffset,
+//             //     longitude: mapLongitude
+//             // });
             
 
 
-            // const time = new Date();
-            entity.setAttribute("animation", {
-                property: 'object3D.position.y', // Fixed: use string
-                to: 10, 
-                dir: 'alternate', // Fixed: use string
-                dur: 2000, 
-                loop: true
-            });
-            document.querySelector("a-scene").appendChild(entity);
+//             // const time = new Date();
+//             // entity.setAttribute("animation", {
+//             //     property: 'object3D.position.y', // Fixed: use string
+//             //     to: 10, 
+//             //     dir: 'alternate', // Fixed: use string
+//             //     dur: 2000, 
+//             //     loop: true
+//             // });
+//             document.querySelector("a-scene").appendChild(entity);
 
 
-/*
-            const entity2 = document.createElement("a-entity");
-            entity2.setAttribute("scale", "1 1 1");
-            entity2.setAttribute("gltf-model", "3D/crow_animated.glb");
-            entity2.setAttribute('gps-new-entity-place', {
-                latitude: mapLatitude + latOffset,
-                longitude: mapLongitude + 0.001
-            });
-            entity2.setAttribute("animation-mixer", "");
+// /*
+//             const entity2 = document.createElement("a-entity");
+//             entity2.setAttribute("scale", "1 1 1");
+//             entity2.setAttribute("gltf-model", "3D/crow_animated.glb");
+//             entity2.setAttribute('gps-new-entity-place', {
+//                 latitude: mapLatitude + latOffset,
+//                 longitude: mapLongitude + 0.001
+//             });
+//             entity2.setAttribute("animation-mixer", "");
         
-            document.querySelector("a-scene").appendChild(entity2);
-*/
+//             document.querySelector("a-scene").appendChild(entity2);
+// */
 
 
 
-            testEntityAdded = true;
-        }
-    });
-};
+//             testEntityAdded = true;
+//         }
+//     // });
+// };
