@@ -1,8 +1,8 @@
 // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
-const sceneEl = document.querySelector('a-scene');
-sceneEl.addEventListener('loaded', () => {
-  sceneEl.camera = new THREE.PerspectiveCamera();
-});
+// const sceneEl = document.querySelector('a-scene');
+// sceneEl.addEventListener('loaded', () => {
+//   sceneEl.camera = new THREE.PerspectiveCamera();
+// });
 
 // /*AFRAME.registerComponent('float-animation', {
 //     schema: {
