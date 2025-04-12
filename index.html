@@ -1,6 +1,6 @@
 <!-- latitude: 51.407765929020044; longitude:  0.42928049758817066; -->
 <!-- https://stackoverflow.com/questions/64917091/aframe-gltf-cube-env-map -->
-<!-- run with npm i -g five-server@latest && five-server --port=8000 -->
+<!-- run with sudp npm i -g five-server@latest && five-server --port=8000 -->
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -36,6 +36,7 @@
         gltf-model="dracoDecoderPath: 3D/dracoDecoderPath;"
         renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic; 
         logarithmicDepthBuffer: true; antialias: true; sortObjects: true;"
+        device-orientation-permission-ui="enabled: false"
         embedded arjs
         >
             <!-- <a-camera gps-new-camera='gpsMinDistance: 15'></a-camera> -->
@@ -47,7 +48,7 @@
 
 
             <a-assets>
-                <a-asset-item id="hand" src="3D/hand_still.glb"></a-asset-item> 
+                <a-asset-item id="hand" src="3D/rubber_duck.glb"></a-asset-item> 
                 <a-cubemap id="hdri">
                     <img src="images/hdri_cube/posx.png">
                     <img src="images/hdri_cube/negx.png">
