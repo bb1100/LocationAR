@@ -14,17 +14,14 @@
   .a-dialog-allow-button {
     color: black;
     background-color: rgb(135, 255, 0);
-    font-family: "Sixtyfour Convergence";
   }
   
   .a-dialog-deny-button {
     color: white;
     background-color: rgb(22, 22, 22);
-    font-family: "Sixtyfour Convergence";
   }
   
   .a-dialog-ok-button {
      color: black;
      background-color: rgb(153, 255, 0);
-     font-family: "Sixtyfour Convergence";
    }
