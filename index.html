@@ -32,11 +32,10 @@
         embedded
         > -->
         <a-scene
-        loading-screen="dotsColor: black; backgroundColor: black"
+        loading-screen="enabled: false"
         gltf-model="dracoDecoderPath: 3D/dracoDecoderPath;"
         renderer="colorManagement: true; exposure: 1; toneMapping: ACESFilmic; 
         logarithmicDepthBuffer: true; antialias: true; sortObjects: true;"
-        device-orientation-permission-ui="enabled: false"
         embedded arjs
         >
             <!-- <a-camera gps-new-camera='gpsMinDistance: 15'></a-camera> -->
@@ -74,8 +73,8 @@
             
             
             <!-- <a-assets>
+                animation="property: visible; to: true; startEvents: deviceorientationpermissiongranted"
                 <a-asset-item id="crow" src="3D/crow_animated.glb"></a-asset-item>
-                animation="property: visible; to: true; startEvents: DOMContentLoaded"
             </a-assets> -->
 
               

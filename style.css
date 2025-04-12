@@ -1,4 +1,3 @@
-
 .sixtyfour-convergence-font {
     font-family: "Sixtyfour Convergence", sans-serif;
     font-optical-sizing: auto;
@@ -11,7 +10,21 @@
       "YELA" 0;
   }
 
-.a-loader-title {
-    color: rgb(153, 255, 0);
+
+  .a-dialog-allow-button {
+    color: black;
+    background-color: rgb(135, 255, 0);
     font-family: "Sixtyfour Convergence";
   }
+  
+  .a-dialog-deny-button {
+    color: white;
+    background-color: rgb(22, 22, 22);
+    font-family: "Sixtyfour Convergence";
+  }
+  
+  .a-dialog-ok-button {
+     color: black;
+     background-color: rgb(153, 255, 0);
+     font-family: "Sixtyfour Convergence";
+   }
