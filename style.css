@@ -1,3 +1,15 @@
+.a-dialog-allow-button {
+  background-color: rgb(135, 255, 0);
+}
+
+.a-dialog-deny-button {
+  background-color: rgb(22, 22, 22);
+}
+
+.a-dialog-ok-button {
+   background-color: rgb(153, 255, 0);
+ }
+
 .sixtyfour-convergence-font {
     font-family: "Sixtyfour Convergence", sans-serif;
     font-optical-sizing: auto;
@@ -9,19 +21,3 @@
       "XELA" 0,
       "YELA" 0;
   }
-
-
-  .a-dialog-allow-button {
-    color: black;
-    background-color: rgb(135, 255, 0);
-  }
-  
-  .a-dialog-deny-button {
-    color: white;
-    background-color: rgb(22, 22, 22);
-  }
-  
-  .a-dialog-ok-button {
-     color: black;
-     background-color: rgb(153, 255, 0);
-   }
