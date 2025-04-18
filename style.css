@@ -5,13 +5,17 @@
   text-align: center;
 }
 
+.a-dialog-button {
+  margin: 3px;
+}
+
 .a-dialog-allow-button {
   font-family: "Sixtyfour Convergence", sans-serif;
   color: black;
   background-color: greenyellow;
   font-weight: bold;
   border-radius: 10px;
-  font-size: 0.8em;
+  font-size: 0.6em;
 }
 
 .a-dialog-deny-button {
@@ -20,7 +24,7 @@
   background-color: sandybrown;
   font-weight: bold;
   border-radius: 10px;
-  font-size: 0.8em;
+  font-size: 0.6em;
 }
 
 .sixtyfour-convergence-font {
